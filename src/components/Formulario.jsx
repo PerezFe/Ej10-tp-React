@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 const Formulario = () => {
   return (
     <section >
-      <div className="d-flex  justify-content-center" >
+      <div className="d-flex  justify-content-center my-3" >
         <p className='mx-5'>Buscar por categoria</p>
         <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
