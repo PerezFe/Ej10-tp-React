@@ -1,18 +1,17 @@
-import { Col, Container, Row } from "react-bootstrap";
-import Noticia from "./Noticia";
+import { Row,Card } from 'react-bootstrap';
+import ItemNoticia from './ItemNoticia';
 
-const ListaNoticias = () => {
-  return (
-    <Container fluid>
-      <Row className="justify-content-center">
-        <Noticia></Noticia>
-        <Noticia></Noticia>
-        <Noticia></Noticia>
-        <Noticia></Noticia>
-        <Noticia></Noticia>
-      </Row>
-    </Container>
-  );
+
+const ListaNoticias = ({noticias}) => {
+    return (
+        <Card className='mt-5'>
+        <Row className='pt-3'>
+            {noticias.map((noticia, posicion)=>(<ItemNoticia key={posicion} noticia={noticia}></ItemNoticia>))}
+        </Row>
+        </Card>
+            
+        
+    );
 };
 
 export default ListaNoticias;
